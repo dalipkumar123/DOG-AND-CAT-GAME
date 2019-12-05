@@ -1,0 +1,56 @@
+<?php
+class dog
+{
+    
+    var $name;
+    var $breed;
+    function getstrength()
+    {
+        
+        return rand(1,100);
+    }
+}
+class cat
+{
+    
+    var $name;
+    var $breed;
+    function getstrength()
+    {
+        
+        return rand(1,100);
+    }
+}
+$fifi = new dog();
+$morris = new cat();
+$numberofdogwinners=0;
+$numberofcatwinners=0;
+
+echo$fifi->getstrength()."\n\r";
+
+echo$morris->getstrength()."\n\r";
+for ($dognumber=1; $dognumber<=101; $dognumber++)
+{$dogreference= new dog();
+$dogarray[]=$dogreference;
+$dogreference->name= $dognumber;
+$dogreference->breed= $dognumber;
+}
+for ($catnumber=1; $catnumber<=101; $catnumber++)
+{
+    $catreference= new cat();
+$catarray[]=$catreference;
+$catreference->name=$catnumber;
+$catreference->breed=$catnumber;
+}
+
+$dogcompetitor = $dogarray[rand(1,100)];
+$dogcompetitorstrength = $dogcompetitor->getstrength();
+$catcompetitor = $catarray[rand(1,100)];
+$catcompetitorstrength = $catcompetitor->getstrength();
+
+if ($dogcompetitorstrength>$catcompetitorstrength){$numberofdogwinners++;}
+if ($catcompetitorstrength>$dogcompetitorstrength){$numberofcatwinners++;}
+echo "number of dog winners:".$numberofdogwinners. "\n\r";
+echo "number of cat winners:".$numberofcatwinners. "\n\r";
+
+?>
