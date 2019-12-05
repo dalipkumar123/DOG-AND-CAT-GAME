@@ -1,0 +1,37 @@
+<?php
+// Your code here!
+class dog
+{
+   
+    var $name;
+    var $breed;
+    function getstrength()
+    {
+       
+        return rand(1,100);
+    }
+}
+class cat
+{
+   
+    var $name;
+    var $breed;
+    function getstrength()
+    {
+       
+        return rand(1,100);
+    }
+}
+$fifi = new dog();
+$morris = new cat();
+
+echo$fifi->getstrength()."\n\r";
+
+echo$morris->getstrength()."\n\r";
+
+
+
+
+
+
+?>
