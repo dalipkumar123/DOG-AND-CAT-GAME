@@ -1,0 +1,29 @@
+
+
+
+<?php
+$dogsArray = array();
+$catsArray = array();
+
+
+class Dog{
+var $name;
+var $breed;
+function getStrength() { return rand(1,100); }}
+
+class Cat {
+var $name;
+var $breed;
+function getStrength() { return rand(1,100); }}
+
+for($dogNumber = 1; $dogNumber<101; $dogNumber++){
+$dogReference= new Dog();
+$dogsArray[] = $dogReference;
+
+$dogReference->$name = $dogNumber;
+$dogReference->$breed = $dogNumber;
+
+}
+print_r($dogsarray);
+?>
+
